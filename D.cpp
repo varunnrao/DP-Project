@@ -23,10 +23,17 @@ int D::get_count()
 }
 void D::del()
 {
-	count--;
-	curr_num_of_objects--;
-	//disp();
-	delete(this);
+	if (B::get_count() == 0)
+	{
+		count--;
+		curr_num_of_objects--;
+		//disp();
+		delete(this);
+	}
+	else
+	{
+		throw std::runtime_error("Cannot delete objects of D while objects of B exist");
+	}
 }
 D::~D()
 {

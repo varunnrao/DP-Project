@@ -39,5 +39,9 @@ int main()
 		e->del();
 		cout<<"\n\n";
 	});	
-
+	
+	B* b1 = B::get();
+	D* d1 = D::get();
+	
+	d1->del();
 }
