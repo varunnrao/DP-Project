@@ -15,11 +15,17 @@ make
 
 # For some help on C++ concepts:
 
-Look at file notes.txt
+Look at file:
+```
+notes.txt
+```
 
 # For an implementation in a single file:
 
-Look at n-ton-2.cpp<br />
+Look at file:
+```
+n-ton-2.cpp
+```
 ## To run:  <br />
 
 ```
