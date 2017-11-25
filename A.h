@@ -13,6 +13,8 @@ class A : public NTon
 	private:
 		void operator delete( void * );
 		static int count;
+	protected:
+		A();
 		
 };
 

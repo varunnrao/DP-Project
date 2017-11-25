@@ -13,6 +13,8 @@ class B: public A
 	private:
 		void operator delete( void * );
 		static int count;
+	protected:
+		B();
 		
 };
 

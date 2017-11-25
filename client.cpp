@@ -43,5 +43,8 @@ int main()
 	B* b1 = B::get();
 	D* d1 = D::get();
 	
+	b1->del();
 	d1->del();
+
+	
 }

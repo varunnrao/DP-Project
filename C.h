@@ -12,6 +12,9 @@ class C: public A
 	private:
 		void operator delete( void * );
 		static int count;
+	protected:
+		C();
+	
 		
 };
 

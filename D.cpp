@@ -41,3 +41,5 @@ D::~D()
 }
 
 void D::operator delete( void * ) {}
+
+D::D(){}

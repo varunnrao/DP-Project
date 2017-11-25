@@ -36,3 +36,4 @@ B::~B()
 }
 
 void B::operator delete( void * ) {}
+B::B(){}

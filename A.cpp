@@ -38,4 +38,5 @@ A::~A()
 }
 
 void A::operator delete( void * ) {}
+A::A() {}
 

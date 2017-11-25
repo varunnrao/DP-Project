@@ -38,4 +38,4 @@ C::~C()
 
 void C::operator delete( void * ){}
 
-
+C::C(){}
