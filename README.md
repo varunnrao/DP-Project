@@ -19,8 +19,8 @@ Look at file notes.txt
 
 Look at n-ton-2.cpp<br />
 To run:  <br />
-$g++-7 n-ton-2.cpp<br />
-$./a.out<br />
+$ g++-7 n-ton-2.cpp<br />
+$ ./a.out<br />
 
 
 # Authors
