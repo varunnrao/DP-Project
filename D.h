@@ -6,13 +6,13 @@
 class D: public B
 {
 	public:		
-		static D* get_D();
-		static int get_count_D();
+		static D* get();
+		static int get_count();
 		virtual void del();
 		virtual ~D();
 	private:
 		void operator delete( void * );
-		static int count_D;
+		static int count;
 };
 
 

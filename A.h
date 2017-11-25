@@ -6,13 +6,13 @@
 class A : public NTon
 {
 	public:		
-		static A* get_A();
-		static int get_count_A();
+		static A* get();
+		static int get_count();
 		virtual void del();
 		virtual ~A();
 	private:
 		void operator delete( void * );
-		static int count_A;
+		static int count;
 		
 };
 

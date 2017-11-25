@@ -1,12 +1,12 @@
 #include "D.h"
 
-int D::count_D = 0;
+int D::count = 0;
 
-D* D::get_D()
+D* D::get()
 {
 	if(curr_num_of_objects < N)
 	{
-		count_D++;
+		count++;
 		curr_num_of_objects++;
 		//disp();
 		return new D();
@@ -17,13 +17,13 @@ D* D::get_D()
 		throw std::runtime_error("too many objects");
 	}
 }
-int D::get_count_D()
+int D::get_count()
 {
-	return count_D;
+	return count;
 }
 void D::del()
 {
-	count_D--;
+	count--;
 	curr_num_of_objects--;
 	//disp();
 	delete(this);

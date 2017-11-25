@@ -12,24 +12,24 @@ int main()
 	
 	
 	
-	A* a1 = A::get_A();
-	A* a2 = A::get_A();
+	A* a1 = A::get();
+	A* a2 = A::get();
 	
 	
 	a2->del();
 	
-	a2 = A::get_A();
+	a2 = A::get();
 	
 	a2->del();
 	
-	A* a3 = B::get_B();
+	A* a3 = B::get();
 	a3->del();
 	
 	a1->del();
 	
 	cout<<NTon::get_curr_num_of_objects()<<'\n';
 	
-	vector<A*> v { A::get_A(), B::get_B(), C::get_C(), D::get_D()};
+	vector<A*> v { A::get(), B::get(), C::get(), D::get()};
 	
 	
 	cout<<NTon::get_curr_num_of_objects()<<'\n';

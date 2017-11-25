@@ -1,13 +1,13 @@
 #include "A.h"
 
-int A::count_A = 0;
+int A::count = 0;
 
-A* A::get_A()
+A* A::get()
 {	
 	
 	if(curr_num_of_objects < N)
 	{
-		count_A++;
+		count++;
 		curr_num_of_objects++;
 		//disp();
 		return new A();
@@ -19,14 +19,14 @@ A* A::get_A()
 	}
 }
 
-int A::get_count_A()
+int A::get_count()
 {
-	return count_A;
+	return count;
 }
 
 void A::del()
 {
-	count_A--;
+	count--;
 	curr_num_of_objects--;
 	//disp();
 	delete(this);

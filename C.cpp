@@ -1,12 +1,12 @@
 #include "C.h"
 
-int C::count_C = 0;
+int C::count = 0;
 		
-C* C::get_C()
+C* C::get()
 {
 	if(curr_num_of_objects < N)
 	{
-		count_C++;
+		count++;
 		curr_num_of_objects++;
 		//disp();
 		return new C();
@@ -18,14 +18,14 @@ C* C::get_C()
 	}
 }
 
-int C::get_count_C()
+int C::get_count()
 {
-	return count_C;
+	return count;
 }
 
 void C::del()
 {
-	count_C--;
+	count--;
 	curr_num_of_objects--;
 	//disp();
 	delete(this);
