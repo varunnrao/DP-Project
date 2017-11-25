@@ -1,0 +1,23 @@
+
+
+//own delete due to problem of count - all base class dtors called on delete on derived class object
+//no static delete function since delete should be polymorphically dispatched
+//cannot have virtual static
+//static functions must be in an implementation file and inlined <=> defining a static function in a class
+//static members can be accessed using static member functions - else class will hav to be instantiated to use it.
+//static member functions have no this pointer.
+//fns defined in class body are inlined
+
+
+/*
+
+Different translation units can share the same declaration by header/source file (yes, it is the standard's wording) inclusion. So you may refer the same name in different translation units. If the name declared has external linkage, the identity of the entity referred by the name is also shared. If the name declared has internal linkage, the same name in different translation units denotes different entities, but you can refer the entity in different scopes of same translation unit. If the name has no linkage, you simply cannot refer the entity from other scope.
+
+When you declare an inline function without the inline keyword and do not define it in the class member list, you cannot call the function before you define it. In the above example, you cannot call f() until after its definition.
+
+Inline member functions have internal linkage. Noninline member functions have external linkage.
+
+Most systems are not CPU-bound. Most systems are I/O-bound
+https://isocpp.org/wiki/faq/inline-functions
+
+*/
