@@ -4,9 +4,22 @@ int NTon::N = 0;
 int NTon::curr_num_of_objects = 0;
 vector<NTon*> NTon::vec_obj;
 
+void NTon::exit_handler()
+{
+	if(vec_obj.size() != 0)
+	{
+		for (vector<NTon*>::reverse_iterator i = vec_obj.rbegin(); i != vec_obj.rend(); ++i ) 
+		{ 
+			cout<<"\n\n";
+			(*i)->del();
+		} 
+	}
+}
+
 void NTon::set_N(int n)
 {
 	N = n;
+	atexit(exit_handler);
 }
 int NTon::get_curr_num_of_objects()
 {
