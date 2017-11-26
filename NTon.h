@@ -18,7 +18,9 @@ class NTon
 		static vector<NTon*> vec_obj;
 		static void exit_handler();
 		virtual void del() = 0;
-		NTon();
+		// this makes the class non-instantiable
+		//ensures derived classes implement this method.
+		NTon(); // ensures its not instantiable
 };
 
 #endif

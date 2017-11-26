@@ -12,7 +12,7 @@ class A : public NTon
 		virtual ~A();
 	private:
 		void operator delete( void * );
-		static int count;		
+		static int count;			
 	protected:
 		A();
 		

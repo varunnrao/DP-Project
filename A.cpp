@@ -11,7 +11,8 @@ A* A::get()
 		curr_num_of_objects++;
 		//disp();
 		//A* a = new A();
-		vec_obj.push_back(new A());		
+		vec_obj.push_back(new A());	
+			
 		return (A*)vec_obj.back();
 	}
 	else
@@ -20,6 +21,8 @@ A* A::get()
 		throw std::runtime_error("too many objects");
 	}
 }
+
+
 
 int A::get_count()
 {
