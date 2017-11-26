@@ -21,3 +21,20 @@ Most systems are not CPU-bound. Most systems are I/O-bound
 https://isocpp.org/wiki/faq/inline-functions
 
 */
+
+Report:
+
+First explain our design pattern, the functionalities we have provided - NTon, hierarchy, longevity, dependency
+Some points to include with code examples from our impl.
+
+- explain reason behind public, protected, private access specifiers for each of the data members and member functions?
+- reason for vector (stack) - exit handler - no parameter - delete requires an object reference.
+- why del()? why not just dtor? why virtual del()
+- del on already deleted is undefined behaviour.
+- why static functions
+- no static interface; cannot have virtual static in C++. Sub-classes cannot enforce interface of NTon through overriding.
+- Cannot have the static functions as virtual fns since they semantically dont make sense to be associated with the object.
+- explain longevity, B deleted only after D.
+- Reason for NTon class - set N; disp(); more semantic than functional.
+- Works for all kinds of inheritance except multiple inheritance( I guess) - diamond issue.
+- Have not handled multi threading - operations are not thread safe.
