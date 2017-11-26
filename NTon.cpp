@@ -2,6 +2,7 @@
 
 int NTon::N = 0;
 int NTon::curr_num_of_objects = 0;
+vector<NTon*> NTon::vec_obj;
 
 void NTon::set_N(int n)
 {

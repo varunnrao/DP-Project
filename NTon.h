@@ -15,6 +15,7 @@ class NTon
 		static int N;
 		static int curr_num_of_objects;	
 		static void disp();
+		static vector<NTon*> vec_obj;
 		NTon();
 };
 

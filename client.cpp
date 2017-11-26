@@ -13,6 +13,8 @@ int main()
 	
 	
 	A* a1 = A::get();
+	
+	a1->del();
 	A* a2 = A::get();
 	
 	
@@ -25,7 +27,7 @@ int main()
 	A* a3 = B::get();
 	a3->del();
 	
-	a1->del();
+	
 	
 	cout<<NTon::get_curr_num_of_objects()<<'\n';
 	
@@ -43,8 +45,12 @@ int main()
 	B* b1 = B::get();
 	D* d1 = D::get();
 	
+	cout<<NTon::get_curr_num_of_objects()<<'\n';
+	
 	b1->del();
 	d1->del();
+	
+	cout<<NTon::get_curr_num_of_objects()<<'\n';
 
 	
 }

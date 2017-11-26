@@ -10,7 +10,9 @@ A* A::get()
 		count++;
 		curr_num_of_objects++;
 		//disp();
-		return new A();
+		//A* a = new A();
+		vec_obj.push_back(new A());		
+		return (A*)vec_obj.back();
 	}
 	else
 	{
@@ -27,9 +29,12 @@ int A::get_count()
 void A::del()
 {
 	count--;
-	curr_num_of_objects--;
+	curr_num_of_objects--;	
+	auto e = remove(vec_obj.begin(), vec_obj.end(), this);
+	delete((A*)(*e));
+	vec_obj.erase(e,vec_obj.end());	
 	//disp();
-	delete(this);
+	//delete(this);
 }
 
 A::~A()
