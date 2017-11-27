@@ -10,6 +10,15 @@ int main()
 {
 	NTon::set_N(4);
 	
+	//ISSUE HERE!!
+	
+	A* a = A::get();
+	B* b = B::get();
+	C* c = C::get();
+	D* d = D::get();
+	a->del();b->del();c->del();d->del();
+
+	
 /*	{	
 	
 		A* a1 = A::get();
@@ -31,10 +40,13 @@ int main()
 	
 		cout<<NTon::get_curr_num_of_objects()<<'\n';
 */	
+/*		
 		vector<A*> v { A::get(), D::get(), C::get(), B::get()};
 	
 	
 		cout<<"Number of Object : "<<NTon::get_curr_num_of_objects()<<'\n';
+*/
+
 /*	
 		for_each(begin(v), end(v), [](A* e)
 		{
