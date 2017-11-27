@@ -1,5 +1,10 @@
 #include "NTon.h"
 
+#include "A.h"
+#include "B.h"
+#include "C.h"
+#include "D.h"
+
 int NTon::N = 0;
 int NTon::curr_num_of_objects = 0;
 vector<NTon*> NTon::vec_obj;
@@ -28,11 +33,15 @@ int NTon::get_curr_num_of_objects()
 
 void NTon::disp()
 {
-	cout<<"\n\n_________________________________________________\n";
-	cout<<"N : "<<N<<'\n';
-	cout<<"Current Number of Objects : "<<get_curr_num_of_objects()<<'\n';
-	cout<<"Remaining Number of Objects : " << N - curr_num_of_objects <<'\n';
-	cout<<"_________________________________________________\n\n\n";
+	cout<<"\n\n__________________________________________\n";
+	cout<<"N \t\t\t\t: \t"<<N<<'\n';
+	cout<<"Current Number of Objects \t: \t"<<get_curr_num_of_objects()<<'\n';
+	cout<<"Number of A object(s)     \t: \t"<<A::get_count()<<'\n';
+	cout<<"Number of B object(s)     \t: \t"<<B::get_count()<<'\n';
+	cout<<"Number of C object(s)     \t: \t"<<C::get_count()<<'\n';
+	cout<<"Number of D object(s)     \t: \t"<<D::get_count()<<'\n';
+	cout<<"Remaining Number of Objects \t: \t" << N - curr_num_of_objects <<'\n';
+	cout<<"__________________________________________\n\n\n";
 }
 
 NTon::NTon() {	} //ensures its not instantiable in any of the derived classes and in the client
