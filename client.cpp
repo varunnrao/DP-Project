@@ -10,18 +10,18 @@ int main()
 {
 	NTon::set_N(4);
 	
-	//ISSUE HERE!!
+	
 	
 	A* a = A::get();
 	D* d = D::get();
 	B* b = B::get();
 	C* c = C::get();
-/*	
+	
 	a->del();cout<<'\n';
 	b->del();cout<<'\n';
 	c->del();cout<<'\n';
 	d->del();cout<<'\n';
-*/
+
 
 
 

@@ -8,21 +8,15 @@ A* A::get()
 	if(curr_num_of_objects < N)
 	{
 		count++;
-		curr_num_of_objects++;
-		//disp();
-		//A* a = new A();
-		vec_obj.push_back(new A());	
-			
-		return (A*)vec_obj.back();
+		curr_num_of_objects++;		
+		vec_obj.push_back(new A());				
+		return dynamic_cast<A*>(vec_obj.back());
 	}
 	else
-	{
-		//disp();
+	{		
 		throw std::runtime_error("too many objects");
 	}
 }
-
-
 
 int A::get_count()
 {
@@ -33,24 +27,14 @@ void A::del()
 {
 	count--;
 	curr_num_of_objects--;	
-	//auto e = remove(vec_obj.begin(), vec_obj.end(), this);
 	
 	auto it = find(vec_obj.begin(), vec_obj.end(), this);
 	if(it != vec_obj.end())
     {
-    	assert(((A*)(*it)) == this);
-    	delete( (A*)(*it) );
-    	vec_obj.erase(it); 
-    	
-    	   	 
-    	
-    }
-	//delete((A*)(*e));
-	
-	//delete(this);
-	//vec_obj.erase(e,vec_obj.end());	
-	//disp();
-	//delete(this);
+    	assert((dynamic_cast<A*>(*it)) == this);
+    	delete( dynamic_cast<A*>(*it) );
+    	vec_obj.erase(it);     	
+    }	
 }
 
 A::~A()
@@ -59,5 +43,6 @@ A::~A()
 }
 
 void A::operator delete( void * ) {}
+
 A::A() {}
 
