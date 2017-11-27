@@ -30,7 +30,7 @@ void NTon::disp()
 {
 	cout<<"\n\n_________________________________________________\n";
 	cout<<"N : "<<N<<'\n';
-	cout<<"Current Number of Objects : "<<curr_num_of_objects<<'\n';
+	cout<<"Current Number of Objects : "<<get_curr_num_of_objects()<<'\n';
 	cout<<"Remaining Number of Objects : " << N - curr_num_of_objects <<'\n';
 	cout<<"_________________________________________________\n\n\n";
 }

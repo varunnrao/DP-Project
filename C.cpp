@@ -30,11 +30,24 @@ void C::del()
 	count--;
 	curr_num_of_objects--;
 	//disp();
-	
+	auto it = find(vec_obj.begin(), vec_obj.end(), this);
+	if(it != vec_obj.end())
+    {
+    	assert(((C*)(*it)) == this);
+    	delete( (C*)(*it) );
+    	vec_obj.erase(it);
+    	
+    	    	 
+    	
+    }
+/*	
 	auto e = remove(vec_obj.begin(), vec_obj.end(), this);
-	delete((C*)(*e));
+	//delete((C*)(*e));
+	assert(((C*)(*e)) == this); 
+	delete(this);
 	vec_obj.erase(e,vec_obj.end());
 	//delete(this);
+*/
 }
 
 C::~C()

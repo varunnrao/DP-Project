@@ -13,10 +13,17 @@ int main()
 	//ISSUE HERE!!
 	
 	A* a = A::get();
+	D* d = D::get();
 	B* b = B::get();
 	C* c = C::get();
-	D* d = D::get();
-	a->del();b->del();c->del();d->del();
+/*	
+	a->del();cout<<'\n';
+	b->del();cout<<'\n';
+	c->del();cout<<'\n';
+	d->del();cout<<'\n';
+*/
+
+
 
 	
 /*	{	
