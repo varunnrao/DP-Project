@@ -3,7 +3,7 @@
 
 #include "A.h"
 
-class B: public A
+class B: virtual public A
 {
 	public:		
 		static B* get();

@@ -1,8 +1,38 @@
-a.out :	client.o A.o B.o C.o D.o NTon.o
-	g++-7 client.o A.o B.o C.o D.o NTon.o
+client6: client6.o A.o B.o C.o D.o E.o NTon.o
+	g++-7 client6.o A.o B.o C.o D.o E.o NTon.o -o client6
 
-client.o : client.cpp A.h B.h C.h D.h NTon.h
-	g++-7 -c client.cpp
+client5: client5.o A.o B.o C.o D.o NTon.o
+	g++-7 client5.o A.o B.o C.o D.o NTon.o -o client5
+
+client4: client4.o A.o B.o C.o D.o NTon.o
+	g++-7 client4.o A.o B.o C.o D.o NTon.o -o client4
+	
+client3: client3.o A.o B.o C.o D.o NTon.o
+	g++-7 client3.o A.o B.o C.o D.o NTon.o -o client3
+
+client2: client2.o A.o B.o C.o D.o NTon.o
+	g++-7 client2.o A.o B.o C.o D.o NTon.o -o client2
+	
+client1 : client1.o A.o B.o C.o D.o NTon.o
+	g++-7 client1.o A.o B.o C.o D.o NTon.o -o client1
+
+client6.o : client6.cpp A.h B.h C.h D.h NTon.h
+	g++-7 -c client6.cpp
+	
+client5.o : client5.cpp A.h B.h C.h D.h NTon.h
+	g++-7 -c client5.cpp
+
+client4.o : client4.cpp A.h B.h C.h D.h NTon.h
+	g++-7 -c client4.cpp
+
+client3.o : client3.cpp A.h B.h C.h D.h NTon.h
+	g++-7 -c client3.cpp
+
+client2.o : client2.cpp A.h B.h C.h D.h NTon.h
+	g++-7 -c client2.cpp
+	
+client1.o : client1.cpp A.h B.h C.h D.h NTon.h
+	g++-7 -c client1.cpp
 	
 A.o : A.cpp A.h NTon.h
 	g++-7 -c A.cpp
@@ -15,6 +45,9 @@ C.o : C.cpp C.h A.h
 
 D.o : D.cpp D.h B.h
 	g++-7 -c D.cpp
+	
+E.o : E.cpp E.h B.h C.h
+	g++-7 -c E.cpp
 
 NTon.o : NTon.cpp NTon.h
 	g++-7 -c NTon.cpp

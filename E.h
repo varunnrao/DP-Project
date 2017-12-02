@@ -1,22 +1,22 @@
-#ifndef C_H
-#define C_H
+#ifndef D_H
+#define D_H
 
-#include "A.h"
+#include "B.h"
+#include "C.h"
 
-class C: virtual public A
+class E: public B, public C
 {
 	public:		
-		static C* get();
+		static E* get();
 		static int get_count();
 		virtual void del();
-		virtual ~C();
+		virtual ~E();
 	private:
 		void operator delete( void * );
 		static int count;
 	protected:
-		C();
-	
-		
+		E();
 };
+
 
 #endif
