@@ -9,7 +9,12 @@ PESIT/PESU 14CS413/UE14CS413<br />
 # To Run:
 ```
 make
-./a.out
+./client1
+./client2
+./client3
+./client4
+./client5
+./client6
 ```
 
 
