@@ -23,6 +23,8 @@ int main()
 		a2->del();
 	
 		a2 = A::get();
+		
+		NTon::disp();
 	
 		a2->del();
 	

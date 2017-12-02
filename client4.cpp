@@ -9,6 +9,7 @@
 int main()
 {
 	//Illustration of longevity/dependency
+	// you can delete objects of D only after all objects of B are deleted
 	
 	NTon::set_N(4);
 	
@@ -18,21 +19,25 @@ int main()
 	
 	
 		cout<<"Number of Object : "<<NTon::get_curr_num_of_objects()<<'\n';
-
-		for_each(begin(v), end(v), [](A* e)
+		try
 		{
-			e->del();
-			cout<<"\n\n";
-		});	
-	
-		B* b1 = B::get();
-		D* d1 = D::get();
-	
-		cout<<NTon::get_curr_num_of_objects()<<'\n';
-	
-		b1->del();
-		d1->del();
-	
-		cout<<NTon::get_curr_num_of_objects()<<'\n';
+			for_each(begin(v), end(v), [](A* e)
+			{
+				e->del();
+				cout<<"\n\n";
+			});
+		}
+		catch(const exception& e) 
+		{ // caught by reference to base
+        	cout << "Exception : "
+            	 << e.what() << "\n";
+    	}
+    	
+    	//dtor called by exit handler automatically 
+    	//in reverse order of creation after process termination
+    	//A dtor has already been called
+    	//Order of dtor invocation: B dtor, C dtor, D dtor	
+    	//These are the objects that haven't been freed as yet.
+		
 	}
 }

@@ -4,6 +4,7 @@
 #include "B.h"
 #include "C.h"
 #include "D.h"
+#include "E.h"
 
 int NTon::N = 0;
 int NTon::curr_num_of_objects = 0;
@@ -40,6 +41,7 @@ void NTon::disp()
 	cout<<"Number of B object(s)     \t: \t"<<B::get_count()<<'\n';
 	cout<<"Number of C object(s)     \t: \t"<<C::get_count()<<'\n';
 	cout<<"Number of D object(s)     \t: \t"<<D::get_count()<<'\n';
+	cout<<"Number of E object(s)     \t: \t"<<E::get_count()<<'\n';
 	cout<<"Remaining Number of Objects \t: \t" << N - curr_num_of_objects <<'\n';
 	cout<<"__________________________________________\n\n\n";
 }

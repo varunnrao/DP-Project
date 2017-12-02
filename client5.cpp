@@ -14,6 +14,7 @@ int main()
 	
 	{	
 		A* a1 = D::get(); A* a2 = C::get();	
+		NTon::disp();
 	}
 
 }

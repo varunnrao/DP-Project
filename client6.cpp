@@ -11,6 +11,7 @@ int main()
 	
 	{	
 		E* e1 = E::get();
+		NTon::disp();
 	}
 
 }

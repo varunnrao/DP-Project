@@ -17,7 +17,7 @@ int main()
 		vector<A*> v { A::get(), B::get(), C::get(), D::get()};
 	
 	
-		cout<<"Number of Object : "<<NTon::get_curr_num_of_objects()<<'\n';
+		NTon::disp();
 
 		for_each(begin(v), end(v), [](A* e)
 		{

@@ -4,6 +4,7 @@
 #include "B.h"
 #include "C.h"
 #include "D.h"
+#include "E.h"
 
 
 int main()
@@ -18,10 +19,28 @@ int main()
 		B* b = B::get();
 		C* c = C::get();
 		
+		
+		
+		NTon::disp();
+		
+		try
+		{
+			A* e = E::get();
+		}
+		catch(const exception& e) 
+		{ // caught by reference to base
+        	cout << "Exception : "
+            	 << e.what() << "\n";
+    	}	
+    	
+    	NTon::disp();
+		
 		a->del();cout<<'\n';
 		b->del();cout<<'\n';
 		c->del();cout<<'\n';
 		d->del();cout<<'\n';
+		
+		NTon::disp();
 
 	}
 
