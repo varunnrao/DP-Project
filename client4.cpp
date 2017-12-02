@@ -35,10 +35,4 @@ int main()
 	
 		cout<<NTon::get_curr_num_of_objects()<<'\n';
 	}
-/*	
-	{
-	
-		A* a1 = D::get(); A* a2 = C::get();	
-	}
-*/
 }
