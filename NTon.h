@@ -20,7 +20,7 @@ class NTon
 		static void exit_handler();
 		virtual void del() = 0;
 		// this makes the class non-instantiable
-		//ensures derived classes implement this method.
+		// ensures derived classes implement this method.
 		NTon(); // ensures its not instantiable
 };
 
