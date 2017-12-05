@@ -1,4 +1,7 @@
-all : client1 client2 client3 client4 client5 client6 client7
+all : client1 client2 client3 client4 client5 client6 client7 client8
+
+client8: client8.o A.o B.o C.o E.o NTon.o
+	g++-7 client8.o A.o B.o C.o D.o E.o NTon.o -o client8
 
 client7: client7.o A.o B.o C.o E.o NTon.o
 	g++-7 client7.o A.o B.o C.o D.o E.o NTon.o -o client7
@@ -20,6 +23,9 @@ client2: client2.o A.o B.o C.o D.o E.o NTon.o
 	
 client1 : client1.o A.o B.o C.o D.o E.o NTon.o
 	g++-7 client1.o A.o B.o C.o D.o E.o NTon.o -o client1
+
+client8.o : client8.cpp A.h B.h C.h D.h E.h NTon.h
+	g++-7 -c client8.cpp
 
 client7.o : client7.cpp A.h B.h C.h D.h E.h NTon.h
 	g++-7 -c client7.cpp

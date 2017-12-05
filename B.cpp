@@ -23,16 +23,15 @@ int B::get_count()
 }
 
 void B::del()
-{
-	count--;
-	curr_num_of_objects--;
-	
+{	
 	auto it = find(vec_obj.begin(), vec_obj.end(), this);
 	if(it != vec_obj.end())
     {
     	assert((dynamic_cast<B*>(*it)) == this);
     	delete( dynamic_cast<B*>(*it) );
-    	vec_obj.erase(it);    	
+    	vec_obj.erase(it); 
+    	count--;
+		curr_num_of_objects--;   	
     }
 }
 
