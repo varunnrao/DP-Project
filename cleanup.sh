@@ -1,8 +1,4 @@
 rm -rf *.o
 rm -rf a.out
-rm -rf client1
-rm -rf client2
-rm -rf client3
-rm -rf client4
-rm -rf client5
-rm -rf client6
+rm -rf client1 client2 client3 client4 client5 client6 client7 client8
+

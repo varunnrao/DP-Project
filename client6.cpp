@@ -10,7 +10,7 @@ int main()
 	NTon::set_N(4);
 	
 	{	
-		E* e1 = E::get();
+		E* e1 = E::get();e1->set_priority(5);
 		NTon::disp();
 	}
 

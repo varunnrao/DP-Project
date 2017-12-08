@@ -6,19 +6,48 @@
 #include "D.h"
 #include "E.h"
 
+
+
+
 int NTon::N = 0;
 int NTon::curr_num_of_objects = 0;
-vector<NTon*> NTon::vec_obj;
+priority_queue<NTon*, vector<NTon*>, cmp> NTon::vec_obj;
+/*
+void NTon::del()
+{
+	cout<<this<<'\n';
+	cout<<vec_obj.top()<<'\n';
+	//delete(vec_obj.top());
+	cout<<vec_obj.size()<<'\n';
+	if(this == vec_obj.top())
+	{
+		this->decr_count();//
+		//this->count--;
+		this->decr_curr_num_of_objects();//
+		//this->curr_num_of_objects--;
+		vec_obj.pop();
+		delete(this);
+	}
+	else
+	{
+		throw runtime_error("Invalid priority");
+	}
+}
+*/
 
 void NTon::exit_handler()
 {
-	if(vec_obj.size() != 0)
+	while(vec_obj.size() != 0)
 	{
-		for (vector<NTon*>::reverse_iterator i = vec_obj.rbegin(); i != vec_obj.rend(); ++i ) 
+		/*for (vector<NTon*>::reverse_iterator i = vec_obj.rbegin(); i != vec_obj.rend(); ++i ) 
 		{ 
 			cout<<"\n\n";
 			(*i)->del();
 		} 
+		*/
+		vec_obj.top()->del();
+		cout<<'\n';
+		//vec_obj.pop();
 	}
 }
 
@@ -62,3 +91,9 @@ void NTon::disp()
 }
 
 NTon::NTon() {	} //ensures its not instantiable in any of the derived classes and in the client
+
+bool cmp::operator()(NTon* lhs, NTon* rhs)
+{
+	return lhs->get_priority() > rhs->get_priority();
+}
+

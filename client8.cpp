@@ -13,7 +13,7 @@ int main()
 {
 	
 	NTon::set_N(1);
-	A* e = E::get();
+	A* e = E::get();e->set_priority(5);
 	
 	NTon::disp();
 	e->del();

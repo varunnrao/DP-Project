@@ -12,17 +12,17 @@ int main()
 {
 	NTon::set_N(3);
 	
-	A* a = A::get();
-	A* d = D::get();
-	A* c = C::get();
+	A* a = A::get();a->set_priority(1);
+	A* d = D::get();d->set_priority(2);
+	A* c = C::get();c->set_priority(3);
 	
 	NTon::set_N(5);
 	
-	A* b = B::get();
-	A* e = E::get();
+	A* b = B::get();b->set_priority(4);
+	A* e = E::get();e->set_priority(5);
 	
-	b->del();cout<<'\n';
-	e->del();cout<<'\n';
+	a->del();cout<<'\n';
+	d->del();cout<<'\n';
 	NTon::set_N(3);//succeeds!
 	
 	try

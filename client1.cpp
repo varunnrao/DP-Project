@@ -14,10 +14,10 @@ int main()
 		
 	{
 		
-		A* a = A::get();
-		D* d = D::get();
-		B* b = B::get();
-		C* c = C::get();
+		A* a = A::get();a->set_priority(1);
+		D* d = D::get();d->set_priority(2);
+		B* b = B::get();b->set_priority(3);
+		C* c = C::get();c->set_priority(4);
 		
 		
 		
@@ -25,7 +25,7 @@ int main()
 		
 		try
 		{
-			A* e = E::get();
+			A* e = E::get();e->set_priority(5);
 		}
 		catch(const exception& e) 
 		{ // caught by reference to base
@@ -36,9 +36,9 @@ int main()
     	NTon::disp();
 		
 		a->del();cout<<'\n';
+		d->del();cout<<'\n';
 		b->del();cout<<'\n';
 		c->del();cout<<'\n';
-		d->del();cout<<'\n';
 		
 		NTon::disp();
 
